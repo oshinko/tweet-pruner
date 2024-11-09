@@ -1,6 +1,6 @@
 # Tweet Pruner
 
-Prune unwanted tweets and clean up your history.
+Prune junk tweets and clean up your Twitter (X.com) history.
 
 ```sh
 cp template.env .env  # edit
