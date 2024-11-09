@@ -1,0 +1,25 @@
+services:
+  server:
+    image: python:3
+    container_name: tweet-pruning-server
+    environment:
+      CLIENT_ID: ${CLIENT_ID}
+      CLIENT_SECRET: ${CLIENT_SECRET}
+      REDIRECT_URI: ${REDIRECT_URI}
+    working_dir: /app
+    command: ['python', '-u', 'wsgi.py', '80']
+    ports:
+      - '${SERVER_PORT}:80'
+    volumes:
+      - .:/app
+    restart: unless-stopped
+
+  trigger:
+    image: python:3
+    container_name: tweet-pruning-trigger
+    depends_on: [server]
+    working_dir: /app
+    command: ['python', '-u', 'trigger.py']
+    volumes:
+      - .:/app
+    restart: unless-stopped
