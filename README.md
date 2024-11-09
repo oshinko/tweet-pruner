@@ -26,4 +26,6 @@ Prune junk tweets and clean up your Twitter (X.com) history.
     docker compose up -d
     ```
 
+1. Go to `http://localhost:8000/` to initiate authentication
+
 This will start the Tweet Pruner server and begin processing the tweets based on the configuration in `.env`.
