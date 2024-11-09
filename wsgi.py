@@ -8,8 +8,6 @@ import urllib.parse
 import urllib.request
 import wsgiref.simple_server
 
-print('CLIENT_ID', os.environ.get('CLIENT_ID'))
-
 CLIENT_ID = os.environ['CLIENT_ID']
 CLIENT_SECRET = os.environ['CLIENT_SECRET']
 REDIRECT_URI = os.environ['REDIRECT_URI']
