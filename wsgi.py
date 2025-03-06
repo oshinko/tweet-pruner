@@ -261,8 +261,8 @@ th, td {{
                 if limit and limit <= n_tweets_deleted:
                     break
 
-                if i + 1 + 50 > len(no_reacted):
-                    break
+                # if i + 1 + 50 > len(no_reacted):
+                #     break
 
                 try:
                     result = _delete_tweet(token_info['access_token'], tweet['id'])
